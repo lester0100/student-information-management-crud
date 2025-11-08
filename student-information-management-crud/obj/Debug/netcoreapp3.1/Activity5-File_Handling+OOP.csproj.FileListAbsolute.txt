@@ -1,0 +1,16 @@
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.exe
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.deps.json
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.runtimeconfig.json
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.runtimeconfig.dev.json
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.dll
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\bin\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.pdb
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.csproj.AssemblyReference.cache
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5_File_Handling_OOP.Form1.resources
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.csproj.GenerateResource.cache
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.AssemblyInfoInputs.cache
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.AssemblyInfo.cs
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.csproj.CoreCompileInputs.cache
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.dll
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.pdb
+C:\Lester\Activity5-File_Handling+OOP\Activity5-File_Handling+OOP\obj\Debug\netcoreapp3.1\Activity5-File_Handling+OOP.genruntimeconfig.cache
