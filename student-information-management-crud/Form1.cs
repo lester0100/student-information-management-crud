@@ -172,18 +172,30 @@ namespace StudentInformationManagementCRUD
                     string idDelete = txtID.Text.Trim();
                     StreamReader sr = new StreamReader(dataPath);
                     StreamWriter sw = new StreamWriter(supportPath);
+                    string nameToDelete = "";
+                    
                     while ((line = sr.ReadLine()) != null)
                     {
                         lineContent = line.Split("|");
                         if (lineContent[0] == idDelete)
+                        {
+                            nameToDelete = $"{lineContent[1]} {lineContent[2]}";
                             continue;
+                        }
                         sw.WriteLine(line);
                     }
+
                     sr.Close();
                     sw.Close();
-                    File.Copy(supportPath, dataPath, true);
-                    MessageBox.Show("Data deleted successfully", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadForm();
+
+                    var result = MessageBox.Show($"Are you sure you want to delete this student?\nFull name: {nameToDelete}\nID: {idDelete}", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.OK)
+                    {
+                        File.Copy(supportPath, dataPath, true);
+                        MessageBox.Show("Data deleted successfully", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadForm();
+                    }
                 }
                 catch (IOException io)
                 {
