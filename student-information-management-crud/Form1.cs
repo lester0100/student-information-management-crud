@@ -121,7 +121,7 @@ namespace StudentInformationManagementCRUD
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            filter(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
+            ValidateUserInput(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
             if ((txtID.MaskCompleted == true) && (txtFN.Text != "") && (txtLN.Text != "") && (txtLec.Text != "") && (txtLab.Text != "") && (txtExam.Text != "")
                 && (!(int.TryParse(txtFN.Text, out t1))) && (!(int.TryParse(txtLN.Text, out t2))) && (int.TryParse(txtLec.Text, out t3)) && (int.TryParse(txtLab.Text, out t4)) && (int.TryParse(txtExam.Text, out t5))
                 && ((Convert.ToInt32(txtLec.Text) >= 0) && ((Convert.ToInt32(txtLec.Text)) <= 100)) && ((Convert.ToInt32(txtLab.Text) >= 0) && ((Convert.ToInt32(txtLab.Text)) <= 100)) && ((Convert.ToInt32(txtExam.Text) >= 0) && ((Convert.ToInt32(txtExam.Text)) <= 100)))
@@ -161,10 +161,8 @@ namespace StudentInformationManagementCRUD
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            filter(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
-            if ((txtID.MaskCompleted == true) && (txtFN.Text != "") && (txtLN.Text != "") && (txtLec.Text != "") && (txtLab.Text != "") && (txtExam.Text != "")
-                && (!(int.TryParse(txtFN.Text, out t1))) && (!(int.TryParse(txtLN.Text, out t2))) && (int.TryParse(txtLec.Text, out t3)) && (int.TryParse(txtLab.Text, out t4)) && (int.TryParse(txtExam.Text, out t5))
-                && ((Convert.ToInt32(txtLec.Text) >= 0) && ((Convert.ToInt32(txtLec.Text)) <= 100)) && ((Convert.ToInt32(txtLab.Text) >= 0) && ((Convert.ToInt32(txtLab.Text)) <= 100)) && ((Convert.ToInt32(txtExam.Text) >= 0) && ((Convert.ToInt32(txtExam.Text)) <= 100)))
+            //ValidateUserInput(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
+            if (txtID.MaskCompleted)
             {
                 try
                 {
@@ -172,7 +170,6 @@ namespace StudentInformationManagementCRUD
                     string line = null;
                     string[] lineContent;
                     string idDelete = txtID.Text.Trim();
-
                     StreamReader sr = new StreamReader(dataPath);
                     StreamWriter sw = new StreamWriter(supportPath);
                     while ((line = sr.ReadLine()) != null)
@@ -201,6 +198,7 @@ namespace StudentInformationManagementCRUD
             {
                 File.Copy(retrievePath, dataPath, true);
                 MessageBox.Show("Data retrieved successfully", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadForm();
             }
             catch (IOException io)
             {
@@ -219,7 +217,7 @@ namespace StudentInformationManagementCRUD
             return grade;
         }
 
-        public void filter(string a, string b, string c, string d, string e, string f)
+        public void ValidateUserInput(string a, string b, string c, string d, string e, string f)
         {
             if ((txtID.MaskCompleted == false) || (txtFN.Text == "") || (txtLN.Text == "") || (txtLec.Text == "") || (txtLab.Text == "") || (txtExam.Text == ""))
             {
@@ -348,7 +346,7 @@ namespace StudentInformationManagementCRUD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            filter(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
+            ValidateUserInput(txtID.Text, txtFN.Text, txtLN.Text, txtLec.Text, txtLab.Text, txtExam.Text);
             if ((txtID.MaskCompleted == true) && (txtFN.Text != "") && (txtLN.Text != "") && (txtLec.Text != "") && (txtLab.Text != "") && (txtExam.Text != "") 
                 && (!(int.TryParse(txtFN.Text, out t1))) && (!(int.TryParse(txtLN.Text, out t2))) && (int.TryParse(txtLec.Text, out t3)) && (int.TryParse(txtLab.Text, out t4)) && (int.TryParse(txtExam.Text, out t5))
                 && ((Convert.ToInt32(txtLec.Text) >= 0) && ((Convert.ToInt32(txtLec.Text)) <= 100)) && ((Convert.ToInt32(txtLab.Text) >= 0) && ((Convert.ToInt32(txtLab.Text)) <= 100)) && ((Convert.ToInt32(txtExam.Text) >= 0) && ((Convert.ToInt32(txtExam.Text)) <= 100)))
