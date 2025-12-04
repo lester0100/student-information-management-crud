@@ -2,6 +2,9 @@
 
 This project is a simple desktop application for managing student records, built with C# and .NET 8 on the Windows Forms framework. It provides basic CRUD (Create, Read, Update, Delete) functionality for student information and grades.
 
+<p align="center">
+  <img src="UI.png" alt="App screenshot" width="700"/>
+</p>
 
 **Key Features:**
 
